@@ -10,7 +10,7 @@
 		AF8BF4811FBD730400AAC665 /* EPLocalizationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8BF4801FBD730400AAC665 /* EPLocalizationUtil.swift */; };
 		AF8BF4831FBD741600AAC665 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF8BF4821FBD741600AAC665 /* Localizable.strings */; };
 		AF8BF48D1FBD8F7A00AAC665 /* EPAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8BF48C1FBD8F7A00AAC665 /* EPAlertView.swift */; };
-		AF8BF4921FBDBB7E00AAC665 /* EPAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF8BF4941FBDBB7E00AAC665 /* EPAlertView.xib */; };
+		AF98C2071FBDD92D002E2351 /* EPAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF98C2091FBDD92D002E2351 /* EPAlertView.xib */; };
 		E210822E1D916C6F002CCAD5 /* EPContactsPicker.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E210822D1D916C6F002CCAD5 /* EPContactsPicker.podspec */; };
 		F4C1C9421BDF8AB7001AA643 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C1C9411BDF8AB7001AA643 /* AppDelegate.swift */; };
 		F4C1C9491BDF8AB7001AA643 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4C1C9481BDF8AB7001AA643 /* Assets.xcassets */; };
@@ -30,8 +30,8 @@
 		AF8BF4801FBD730400AAC665 /* EPLocalizationUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPLocalizationUtil.swift; sourceTree = "<group>"; };
 		AF8BF4821FBD741600AAC665 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		AF8BF48C1FBD8F7A00AAC665 /* EPAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPAlertView.swift; sourceTree = "<group>"; };
-		AF8BF4931FBDBB7E00AAC665 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/EPAlertView.xib; sourceTree = "<group>"; };
-		AF8BF4951FBDBC1700AAC665 /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/EPAlertView.strings; sourceTree = "<group>"; };
+		AF98C2081FBDD92D002E2351 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/EPAlertView.xib; sourceTree = "<group>"; };
+		AF98C20B1FBDD92F002E2351 /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/EPAlertView.strings; sourceTree = "<group>"; };
 		E210822D1D916C6F002CCAD5 /* EPContactsPicker.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EPContactsPicker.podspec; sourceTree = "<group>"; };
 		F4C1C93E1BDF8AB7001AA643 /* Contacts Picker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Contacts Picker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C1C9411BDF8AB7001AA643 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 				AF8BF4801FBD730400AAC665 /* EPLocalizationUtil.swift */,
 				AF8BF4821FBD741600AAC665 /* Localizable.strings */,
 				AF8BF48C1FBD8F7A00AAC665 /* EPAlertView.swift */,
-				AF8BF4941FBDBB7E00AAC665 /* EPAlertView.xib */,
+				AF98C2091FBDD92D002E2351 /* EPAlertView.xib */,
 			);
 			name = EPContactsPicker;
 			path = Pods;
@@ -153,6 +153,7 @@
 			knownRegions = (
 				en,
 				Base,
+				he,
 			);
 			mainGroup = F4C1C9351BDF8AB7001AA643;
 			productRefGroup = F4C1C93F1BDF8AB7001AA643 /* Products */;
@@ -169,7 +170,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF8BF4921FBDBB7E00AAC665 /* EPAlertView.xib in Resources */,
+				AF98C2071FBDD92D002E2351 /* EPAlertView.xib in Resources */,
 				F4C1C94C1BDF8AB7001AA643 /* LaunchScreen.storyboard in Resources */,
 				AF8BF4831FBD741600AAC665 /* Localizable.strings in Resources */,
 				F4C1C9491BDF8AB7001AA643 /* Assets.xcassets in Resources */,
@@ -201,11 +202,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AF8BF4941FBDBB7E00AAC665 /* EPAlertView.xib */ = {
+		AF98C2091FBDD92D002E2351 /* EPAlertView.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AF8BF4931FBDBB7E00AAC665 /* Base */,
-				AF8BF4951FBDBC1700AAC665 /* he */,
+				AF98C2081FBDD92D002E2351 /* Base */,
+				AF98C20B1FBDD92F002E2351 /* he */,
 			);
 			name = EPAlertView.xib;
 			sourceTree = "<group>";
