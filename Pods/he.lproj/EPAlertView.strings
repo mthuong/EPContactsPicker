@@ -1,15 +1,15 @@
 
 /* Class = "UIButton"; normalTitle = "CANCEL"; ObjectID = "9lu-Vq-44G"; */
-"9lu-Vq-44G.normalTitle" = "CANCEL";
+"9lu-Vq-44G.normalTitle" = "ביטול";
 
 /* Class = "UITextField"; placeholder = "Name"; ObjectID = "IWE-ut-iuQ"; */
-"IWE-ut-iuQ.placeholder" = "Name";
+"IWE-ut-iuQ.placeholder" = "שם";
 
 /* Class = "UILabel"; text = "ADD CONTACT"; ObjectID = "ZiS-LB-kBK"; */
-"ZiS-LB-kBK.text" = "ADD CONTACT";
+"ZiS-LB-kBK.text" = "הוסף איש קשר";
 
 /* Class = "UITextField"; placeholder = "Number"; ObjectID = "h3Y-KU-AQ6"; */
-"h3Y-KU-AQ6.placeholder" = "Number";
+"h3Y-KU-AQ6.placeholder" = "מספר טלפון";
 
 /* Class = "UIButton"; normalTitle = "INVITE"; ObjectID = "mzv-ZH-u8l"; */
-"mzv-ZH-u8l.normalTitle" = "INVITE";
+"mzv-ZH-u8l.normalTitle" = "אישור";
