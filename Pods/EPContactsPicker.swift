@@ -55,6 +55,7 @@ open class EPContactsPicker: UITableViewController, UISearchResultsUpdating, UIS
     
     var subtitleCellValue = SubtitleCellValue.phoneNumber
     var multiSelectEnabled: Bool = false //Default is single selection contact
+    var alertView: EPAlertView?
     
     // MARK: - Lifecycle Methods
     
@@ -197,7 +198,7 @@ open class EPContactsPicker: UITableViewController, UISearchResultsUpdating, UIS
                 //Authorization granted by user for this app.
                 var contactsArray = [CNContact]()
                 let addContact = CNMutableContact()
-                addContact.givenName = "+ Add phone number"
+                addContact.givenName = LocalizationUtil.with("+ Add phone number")
                 contactsArray.insert(addContact, at: 0)
                 
                 
@@ -266,9 +267,14 @@ open class EPContactsPicker: UITableViewController, UISearchResultsUpdating, UIS
     textField.addConstraint(heightConstraint)
   }
   
-  fileprivate func addContactAction(_ alertController: UIAlertController) {
-    guard let nameField = (alertController.textFields![0] as UITextField).text,
-          let phoneField = (alertController.textFields![1] as UITextField).text else {
+  func addContactAction() {
+    guard let alertView = self.alertView else {
+      return
+    }
+    alertView.removeFromSuperview()
+    
+    guard let nameField = alertView.nameField.text,
+          let phoneField = alertView.numberField.text else {
         return
     }
     
@@ -290,45 +296,61 @@ open class EPContactsPicker: UITableViewController, UISearchResultsUpdating, UIS
       self.tableView.selectRow(at: indexPath, animated: true, scrollPosition: .none)
       self.tableView.delegate?.tableView!(self.tableView, didSelectRowAt: indexPath)
     } else {
-      let errorAlert = UIAlertController(title: "Error", message: "Please input name and phone number", preferredStyle: .alert)
-      errorAlert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { alert -> Void in
-        self.present(alertController, animated: true, completion: nil)
+      let message = "Please input name and phone number"
+      let errorAlert = UIAlertController(title: "", message: LocalizationUtil.with(message), preferredStyle: .alert)
+      errorAlert.addAction(UIAlertAction(title: LocalizationUtil.with("OK"), style: .cancel, handler: { alert -> Void in
+        errorAlert.dismiss(animated: true, completion: nil)
       }))
       self.present(errorAlert, animated: true, completion: nil)
     }
   }
   
+  func dismissAlertView() {
+    self.alertView?.removeFromSuperview()
+  }
+  
   func presenetNewContactScreen() {
-    let alertController = UIAlertController(title: "Add Contact", message: "", preferredStyle: .alert)
-    
-    let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: { _ in
-      alertController.dismiss(animated: true, completion: nil)
-    })
-    
-    alertController.addAction(cancelAction)
-    
-    let action = UIAlertAction(title: "OK", style: .default, handler: { alert -> Void in
-      self.addContactAction(alertController)
-    })
-    
-    alertController.addAction(action)
-    
-    alertController.addTextField(configurationHandler: { (textField) -> Void in
-      textField.autocapitalizationType = .words
-      self.design(textField: textField, placeholderText: "Name")
-    })
-    
-    alertController.addTextField(configurationHandler: { (textField) -> Void in
-      textField.keyboardType = .decimalPad
-      self.design(textField: textField, placeholderText: "Number")
-    })
-    
-    // Background color
-    let backView = alertController.view.subviews.last?.subviews.last
-    backView?.layer.cornerRadius = 6.0
-    backView?.backgroundColor = EPGlobalConstants.Colors.grey
-    
-    self.present(alertController, animated: true, completion: nil)
+    let alertView_ = EPAlertView(frame: self.view.frame)
+    self.alertView = alertView_
+    alertView_.inviteButton.addTarget(self, action: #selector(EPContactsPicker.addContactAction), for: .touchUpInside)
+    alertView_.cancelButton.addTarget(self, action: #selector(EPContactsPicker.dismissAlertView), for: .touchUpInside)
+    self.alertView = alertView_
+//    let alertController = UIAlertController(title: LocalizationUtil.with("Add Contact"), message: "", preferredStyle: .alert)
+//
+//    let cancelAction = UIAlertAction(title: LocalizationUtil.with("Cancel"), style: .default, handler: { _ in
+//      alertController.dismiss(animated: true, completion: nil)
+//    })
+//
+//    alertController.addAction(cancelAction)
+//
+//    let action = UIAlertAction(title: LocalizationUtil.with("INVITE"), style: .default, handler: { alert -> Void in
+//      self.addContactAction(alertController)
+//    })
+//
+//    alertController.addAction(action)
+//
+//    alertController.addTextField(configurationHandler: { (textField) -> Void in
+//      textField.autocapitalizationType = .words
+//      self.design(textField: textField, placeholderText: LocalizationUtil.with("Name"))
+//    })
+//
+//    alertController.addTextField(configurationHandler: { (textField) -> Void in
+//      textField.keyboardType = .decimalPad
+//      self.design(textField: textField, placeholderText: LocalizationUtil.with("Number"))
+//    })
+//
+//    // Background color
+//    let subView = alertController.view.subviews.first?.subviews.first
+//    subView?.subviews.forEach { view in
+//      view.subviews.forEach { subview_ in
+//        subview_.backgroundColor = UIColor.clear
+//        if let visAffectView = subview_ as? UIVisualEffectView {
+//          visAffectView.effect = nil
+//        }
+//      }
+//    }
+    self.view.addSubview(self.alertView!)
+//    self.present(alertController, animated: true, completion: nil)
   }
     
     // MARK: - Table View DataSource
@@ -381,7 +403,7 @@ open class EPContactsPicker: UITableViewController, UISearchResultsUpdating, UIS
     override open func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! EPContactCell
         let selectedContact =  cell.contact!
-        if selectedContact.firstName == "+ Add phone number" {
+        if selectedContact.firstName == LocalizationUtil.with("+ Add phone number") {
           // add new contact
           presenetNewContactScreen()
           return

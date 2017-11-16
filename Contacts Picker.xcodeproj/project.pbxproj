@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF8BF4811FBD730400AAC665 /* LocalizationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8BF4801FBD730400AAC665 /* LocalizationUtil.swift */; };
+		AF8BF4831FBD741600AAC665 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF8BF4821FBD741600AAC665 /* Localizable.strings */; };
+		AF8BF48D1FBD8F7A00AAC665 /* EPAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8BF48C1FBD8F7A00AAC665 /* EPAlertView.swift */; };
+		AF8BF4911FBDB05600AAC665 /* EPAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF8BF4901FBDB05600AAC665 /* EPAlertView.xib */; };
 		E210822E1D916C6F002CCAD5 /* EPContactsPicker.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E210822D1D916C6F002CCAD5 /* EPContactsPicker.podspec */; };
 		F4C1C9421BDF8AB7001AA643 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C1C9411BDF8AB7001AA643 /* AppDelegate.swift */; };
 		F4C1C9491BDF8AB7001AA643 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4C1C9481BDF8AB7001AA643 /* Assets.xcassets */; };
@@ -23,6 +27,10 @@
 
 /* Begin PBXFileReference section */
 		4B7552C01CD28ADA00C638F1 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+		AF8BF4801FBD730400AAC665 /* LocalizationUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationUtil.swift; sourceTree = "<group>"; };
+		AF8BF4821FBD741600AAC665 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		AF8BF48C1FBD8F7A00AAC665 /* EPAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPAlertView.swift; sourceTree = "<group>"; };
+		AF8BF4901FBDB05600AAC665 /* EPAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EPAlertView.xib; sourceTree = "<group>"; };
 		E210822D1D916C6F002CCAD5 /* EPContactsPicker.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EPContactsPicker.podspec; sourceTree = "<group>"; };
 		F4C1C93E1BDF8AB7001AA643 /* Contacts Picker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Contacts Picker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C1C9411BDF8AB7001AA643 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +99,10 @@
 				F4C1C9791BDF9227001AA643 /* EPContactCell.xib */,
 				F4C1C97A1BDF9227001AA643 /* EPContactsPicker.swift */,
 				F4C1C97B1BDF9227001AA643 /* EPExtensions.swift */,
+				AF8BF4801FBD730400AAC665 /* LocalizationUtil.swift */,
+				AF8BF4821FBD741600AAC665 /* Localizable.strings */,
+				AF8BF48C1FBD8F7A00AAC665 /* EPAlertView.swift */,
+				AF8BF4901FBDB05600AAC665 /* EPAlertView.xib */,
 			);
 			name = EPContactsPicker;
 			path = Pods;
@@ -127,8 +139,9 @@
 				TargetAttributes = {
 					F4C1C93D1BDF8AB7001AA643 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = E6KB8WYCTF;
 						LastSwiftMigration = 0800;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -155,7 +168,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF8BF4911FBDB05600AAC665 /* EPAlertView.xib in Resources */,
 				F4C1C94C1BDF8AB7001AA643 /* LaunchScreen.storyboard in Resources */,
+				AF8BF4831FBD741600AAC665 /* Localizable.strings in Resources */,
 				F4C1C9491BDF8AB7001AA643 /* Assets.xcassets in Resources */,
 				F4C1C9741BDF8BE3001AA643 /* Main.storyboard in Resources */,
 				F4C1C97F1BDF9227001AA643 /* EPContactCell.xib in Resources */,
@@ -170,10 +185,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF8BF4811FBD730400AAC665 /* LocalizationUtil.swift in Sources */,
 				F4C1C9421BDF8AB7001AA643 /* AppDelegate.swift in Sources */,
 				F4C1C9801BDF9227001AA643 /* EPContactsPicker.swift in Sources */,
 				F4C1C9711BDF8BBA001AA643 /* ViewController.swift in Sources */,
 				F4C1C97C1BDF9227001AA643 /* EPConstants.swift in Sources */,
+				AF8BF48D1FBD8F7A00AAC665 /* EPAlertView.swift in Sources */,
 				F4C1C97E1BDF9227001AA643 /* EPContactCell.swift in Sources */,
 				F4C1C97D1BDF9227001AA643 /* EPContact.swift in Sources */,
 				F4C1C9811BDF9227001AA643 /* EPExtensions.swift in Sources */,
@@ -294,11 +311,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E6KB8WYCTF;
 				INFOPLIST_FILE = "Contacts Picker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.prabaharan.eppicker.Contacts-Picker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -307,11 +328,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E6KB8WYCTF;
 				INFOPLIST_FILE = "Contacts Picker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.prabaharan.eppicker.Contacts-Picker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
