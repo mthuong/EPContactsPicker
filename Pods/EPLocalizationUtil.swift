@@ -7,7 +7,7 @@
  */
 import Foundation
 
-open class LocalizationUtil {
+open class EPLocalizationUtil {
   
   open class func with(_ string: String) -> String {
     return NSLocalizedString(string, comment: "")
@@ -22,7 +22,7 @@ open class LocalizationUtil {
       return region.substring(from: nextIndex)
     }
     if region == "" &&
-      LocalizationUtil.preferredLanguage?.caseInsensitiveCompare("he") == .orderedSame {
+      EPLocalizationUtil.preferredLanguage?.caseInsensitiveCompare("he") == .orderedSame {
       return "IL"
     }
     return (Locale.current as NSLocale).object(forKey: NSLocale.Key.countryCode) as? String

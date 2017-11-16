@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AF8BF4811FBD730400AAC665 /* LocalizationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8BF4801FBD730400AAC665 /* LocalizationUtil.swift */; };
+		AF8BF4811FBD730400AAC665 /* EPLocalizationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8BF4801FBD730400AAC665 /* EPLocalizationUtil.swift */; };
 		AF8BF4831FBD741600AAC665 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF8BF4821FBD741600AAC665 /* Localizable.strings */; };
 		AF8BF48D1FBD8F7A00AAC665 /* EPAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8BF48C1FBD8F7A00AAC665 /* EPAlertView.swift */; };
 		AF8BF4921FBDBB7E00AAC665 /* EPAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF8BF4941FBDBB7E00AAC665 /* EPAlertView.xib */; };
@@ -27,7 +27,7 @@
 
 /* Begin PBXFileReference section */
 		4B7552C01CD28ADA00C638F1 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
-		AF8BF4801FBD730400AAC665 /* LocalizationUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationUtil.swift; sourceTree = "<group>"; };
+		AF8BF4801FBD730400AAC665 /* EPLocalizationUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPLocalizationUtil.swift; sourceTree = "<group>"; };
 		AF8BF4821FBD741600AAC665 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		AF8BF48C1FBD8F7A00AAC665 /* EPAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPAlertView.swift; sourceTree = "<group>"; };
 		AF8BF4931FBDBB7E00AAC665 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/EPAlertView.xib; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 				F4C1C9791BDF9227001AA643 /* EPContactCell.xib */,
 				F4C1C97A1BDF9227001AA643 /* EPContactsPicker.swift */,
 				F4C1C97B1BDF9227001AA643 /* EPExtensions.swift */,
-				AF8BF4801FBD730400AAC665 /* LocalizationUtil.swift */,
+				AF8BF4801FBD730400AAC665 /* EPLocalizationUtil.swift */,
 				AF8BF4821FBD741600AAC665 /* Localizable.strings */,
 				AF8BF48C1FBD8F7A00AAC665 /* EPAlertView.swift */,
 				AF8BF4941FBDBB7E00AAC665 /* EPAlertView.xib */,
@@ -186,7 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF8BF4811FBD730400AAC665 /* LocalizationUtil.swift in Sources */,
+				AF8BF4811FBD730400AAC665 /* EPLocalizationUtil.swift in Sources */,
 				F4C1C9421BDF8AB7001AA643 /* AppDelegate.swift in Sources */,
 				F4C1C9801BDF9227001AA643 /* EPContactsPicker.swift in Sources */,
 				F4C1C9711BDF8BBA001AA643 /* ViewController.swift in Sources */,

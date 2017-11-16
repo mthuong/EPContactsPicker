@@ -198,7 +198,7 @@ open class EPContactsPicker: UITableViewController, UISearchResultsUpdating, UIS
                 //Authorization granted by user for this app.
                 var contactsArray = [CNContact]()
                 let addContact = CNMutableContact()
-                addContact.givenName = LocalizationUtil.with("+ Add phone number")
+                addContact.givenName = EPLocalizationUtil.with("+ Add phone number")
                 contactsArray.insert(addContact, at: 0)
                 
                 
@@ -297,8 +297,8 @@ open class EPContactsPicker: UITableViewController, UISearchResultsUpdating, UIS
       self.tableView.delegate?.tableView!(self.tableView, didSelectRowAt: indexPath)
     } else {
       let message = "Please input name and phone number"
-      let errorAlert = UIAlertController(title: "", message: LocalizationUtil.with(message), preferredStyle: .alert)
-      errorAlert.addAction(UIAlertAction(title: LocalizationUtil.with("OK"), style: .cancel, handler: { alert -> Void in
+      let errorAlert = UIAlertController(title: "", message: EPLocalizationUtil.with(message), preferredStyle: .alert)
+      errorAlert.addAction(UIAlertAction(title: EPLocalizationUtil.with("OK"), style: .cancel, handler: { alert -> Void in
         errorAlert.dismiss(animated: true, completion: nil)
       }))
       self.present(errorAlert, animated: true, completion: nil)
@@ -403,7 +403,7 @@ open class EPContactsPicker: UITableViewController, UISearchResultsUpdating, UIS
     override open func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! EPContactCell
         let selectedContact =  cell.contact!
-        if selectedContact.firstName == LocalizationUtil.with("+ Add phone number") {
+        if selectedContact.firstName == EPLocalizationUtil.with("+ Add phone number") {
           // add new contact
           presenetNewContactScreen()
           return
