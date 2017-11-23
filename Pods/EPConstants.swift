@@ -33,5 +33,11 @@ struct EPGlobalConstants {
     struct Arrays {
         static let alphabets = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","#"] //# indicates the names with numbers and blank spaces
     }
-    
+  
+  //MARK: Fonts Constants
+  struct Fonts {
+    static let titleFont = UIFont(name: "Montserrat-Regular", size: 16.5)
+    static let feildFont = UIFont(name: "OpenSans-Italic", size: 16.5)
+    static let buttonFont = UIFont(name: "Montserrat-Regular", size: 14.0)
+  }
 }

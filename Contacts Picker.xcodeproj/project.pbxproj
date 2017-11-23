@@ -11,6 +11,7 @@
 		AF8BF4831FBD741600AAC665 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF8BF4821FBD741600AAC665 /* Localizable.strings */; };
 		AF8BF48D1FBD8F7A00AAC665 /* EPAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8BF48C1FBD8F7A00AAC665 /* EPAlertView.swift */; };
 		AF98C2071FBDD92D002E2351 /* EPAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF98C2091FBDD92D002E2351 /* EPAlertView.xib */; };
+		AFD2C24C1FC6F9D0008EE76C /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = AFD2C24B1FC6F9CF008EE76C /* Fonts */; };
 		E210822E1D916C6F002CCAD5 /* EPContactsPicker.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E210822D1D916C6F002CCAD5 /* EPContactsPicker.podspec */; };
 		F4C1C9421BDF8AB7001AA643 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C1C9411BDF8AB7001AA643 /* AppDelegate.swift */; };
 		F4C1C9491BDF8AB7001AA643 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4C1C9481BDF8AB7001AA643 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		AF8BF48C1FBD8F7A00AAC665 /* EPAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPAlertView.swift; sourceTree = "<group>"; };
 		AF98C2081FBDD92D002E2351 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/EPAlertView.xib; sourceTree = "<group>"; };
 		AF98C20B1FBDD92F002E2351 /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/EPAlertView.strings; sourceTree = "<group>"; };
+		AFD2C24B1FC6F9CF008EE76C /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 		E210822D1D916C6F002CCAD5 /* EPContactsPicker.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EPContactsPicker.podspec; sourceTree = "<group>"; };
 		F4C1C93E1BDF8AB7001AA643 /* Contacts Picker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Contacts Picker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C1C9411BDF8AB7001AA643 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			children = (
 				4B7552C01CD28ADA00C638F1 /* .travis.yml */,
 				E210822D1D916C6F002CCAD5 /* EPContactsPicker.podspec */,
+				AFD2C24B1FC6F9CF008EE76C /* Fonts */,
 				F4C1C9401BDF8AB7001AA643 /* Contacts Picker */,
 				F4C1C93F1BDF8AB7001AA643 /* Products */,
 			);
@@ -177,6 +180,7 @@
 				F4C1C9741BDF8BE3001AA643 /* Main.storyboard in Resources */,
 				F4C1C97F1BDF9227001AA643 /* EPContactCell.xib in Resources */,
 				E210822E1D916C6F002CCAD5 /* EPContactsPicker.podspec in Resources */,
+				AFD2C24C1FC6F9D0008EE76C /* Fonts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

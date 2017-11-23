@@ -60,8 +60,8 @@ extension UIAlertController {
 public extension UIView {
   public func addSubviewAutoLayoutFill(_ view: UIView) {
     self.addSubview(view)
-    view.translatesAutoresizingMaskIntoConstraints = false
-    view.contentMode = UIViewContentMode.center
+//    view.translatesAutoresizingMaskIntoConstraints = false
+//    view.contentMode = UIViewContentMode.center
     self.addConstraint(NSLayoutConstraint(item: view, attribute: .left, relatedBy: .equal,
                                           toItem: self, attribute: .left, multiplier: 1.0, constant: 0.0))
     self.addConstraint(NSLayoutConstraint(item: view, attribute: .right, relatedBy: .equal,
