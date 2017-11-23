@@ -315,6 +315,9 @@ open class EPContactsPicker: UITableViewController, UISearchResultsUpdating, UIS
     alertView_.inviteButton.addTarget(self, action: #selector(EPContactsPicker.addContactAction), for: .touchUpInside)
     alertView_.cancelButton.addTarget(self, action: #selector(EPContactsPicker.dismissAlertView), for: .touchUpInside)
     self.alertView = alertView_
+    self.view.addSubview(self.alertView!)
+    
+    
 //    let alertController = UIAlertController(title: LocalizationUtil.with("Add Contact"), message: "", preferredStyle: .alert)
 //
 //    let cancelAction = UIAlertAction(title: LocalizationUtil.with("Cancel"), style: .default, handler: { _ in
@@ -349,7 +352,7 @@ open class EPContactsPicker: UITableViewController, UISearchResultsUpdating, UIS
 //        }
 //      }
 //    }
-    self.view.addSubview(self.alertView!)
+    
 //    self.present(alertController, animated: true, completion: nil)
   }
     

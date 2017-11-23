@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,36 +20,36 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view alpha="0.69999998807907104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RPY-uh-nvm" userLabel="Background View">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gad-xA-rFp">
-                    <rect key="frame" x="47" y="50" width="281" height="567"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gad-xA-rFp" customClass="EPAlertController" customModule="Contacts_Picker" customModuleProvider="target">
+                    <rect key="frame" x="193.5" y="50" width="280" height="275"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADD CONTACT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYq-Mt-AFV">
-                            <rect key="frame" x="82" y="50" width="117.5" height="21"/>
+                            <rect key="frame" x="81.5" y="50" width="117.5" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" red="0.98431372549999996" green="0.69019607839999997" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0h6-ms-IQb">
-                            <rect key="frame" x="5" y="91" width="271" height="30"/>
+                            <rect key="frame" x="5" y="91" width="270" height="30"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="name"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QdP-om-rU0">
-                            <rect key="frame" x="5" y="131" width="271" height="30"/>
+                            <rect key="frame" x="5" y="131" width="270" height="30"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Qv-RP-XZG">
-                            <rect key="frame" x="155.5" y="201" width="120.5" height="30"/>
+                            <rect key="frame" x="155" y="201" width="120" height="30"/>
                             <color key="backgroundColor" red="0.98431372549999996" green="0.69019607839999997" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <state key="normal" title="INVITE">
@@ -61,7 +60,7 @@
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MUQ-9W-E00">
-                            <rect key="frame" x="5" y="201" width="120.5" height="30"/>
+                            <rect key="frame" x="5" y="201" width="120" height="30"/>
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <state key="normal" title="CANCEL">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -72,6 +71,7 @@
                     <constraints>
                         <constraint firstItem="0h6-ms-IQb" firstAttribute="leading" secondItem="Gad-xA-rFp" secondAttribute="leading" constant="5" id="7MO-eb-CdH"/>
                         <constraint firstItem="3Qv-RP-XZG" firstAttribute="top" secondItem="QdP-om-rU0" secondAttribute="bottom" constant="40" id="A2k-hp-03U"/>
+                        <constraint firstAttribute="width" constant="280" id="FfM-pj-VkV"/>
                         <constraint firstAttribute="trailing" secondItem="0h6-ms-IQb" secondAttribute="trailing" constant="5" id="K63-K0-eKv"/>
                         <constraint firstItem="MUQ-9W-E00" firstAttribute="leading" secondItem="Gad-xA-rFp" secondAttribute="leading" constant="5" id="Q58-gN-2DZ"/>
                         <constraint firstAttribute="trailing" secondItem="3Qv-RP-XZG" secondAttribute="trailing" constant="5" id="Spq-qC-Db7"/>
@@ -93,7 +93,6 @@
                 <constraint firstItem="RPY-uh-nvm" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="1uA-PK-MEA"/>
                 <constraint firstItem="Gad-xA-rFp" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="1yp-vf-wlh"/>
                 <constraint firstItem="Gad-xA-rFp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="50" id="375-Sj-55b"/>
-                <constraint firstItem="Gad-xA-rFp" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.75" id="F6f-sa-KVt"/>
                 <constraint firstItem="RPY-uh-nvm" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Gu4-kS-kze"/>
                 <constraint firstItem="RPY-uh-nvm" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="HgK-fb-evT"/>
                 <constraint firstItem="RPY-uh-nvm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="PEN-xV-CpV"/>
