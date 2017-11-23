@@ -13,6 +13,7 @@ open class EPAlertView: UIView {
   fileprivate var framePortrait = CGRect(x: 0, y: 0, width: 300, height: 383)
   fileprivate var frameLandscape = CGRect(x: 0, y: 0, width: 375, height: 250)
   var contentView = UIView()
+  var backgroundView = UIView()
   var nameField = UITextField()
   var numberField = UITextField()
   var inviteButton = UIButton()
@@ -111,7 +112,7 @@ open class EPAlertView: UIView {
     frameLandscape = CGRect(x: 0, y: 0, width: height, height: width)
     framePortrait = CGRect(x: 0, y: 0, width: width, height: height)
     
-    let backgroundView = UIView(frame: frame)
+    backgroundView = UIView(frame: frame)
     backgroundView.backgroundColor = UIColor(white: 0, alpha: 0.8)
     contentView.frame = frame
     contentView.backgroundColor = UIColor.clear
@@ -150,13 +151,14 @@ open class EPAlertView: UIView {
   }
   
   func onOrientationChanged() {
-    
     if UIDevice.current.orientation.isLandscape {
       self.frame = frameLandscape
       self.contentView.frame = frameLandscape
+      self.backgroundView.frame = frameLandscape
     } else {
       self.frame = framePortrait
       self.contentView.frame = framePortrait
+      self.backgroundView.frame = framePortrait
     }
     
     self.layoutSubviews()

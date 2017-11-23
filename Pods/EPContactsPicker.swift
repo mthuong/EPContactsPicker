@@ -42,7 +42,7 @@ public enum SubtitleCellValue{
 open class EPContactsPicker: UITableViewController, UISearchResultsUpdating, UISearchBarDelegate {
     
     // MARK: - Properties
-    
+    open var superView: UIView?
     open weak var contactDelegate: EPPickerDelegate? 
     var contactsStore: CNContactStore?
     var resultSearchController = UISearchController()
@@ -315,45 +315,9 @@ open class EPContactsPicker: UITableViewController, UISearchResultsUpdating, UIS
     alertView_.inviteButton.addTarget(self, action: #selector(EPContactsPicker.addContactAction), for: .touchUpInside)
     alertView_.cancelButton.addTarget(self, action: #selector(EPContactsPicker.dismissAlertView), for: .touchUpInside)
     self.alertView = alertView_
-    self.view.addSubview(self.alertView!)
-    
-    
-//    let alertController = UIAlertController(title: LocalizationUtil.with("Add Contact"), message: "", preferredStyle: .alert)
-//
-//    let cancelAction = UIAlertAction(title: LocalizationUtil.with("Cancel"), style: .default, handler: { _ in
-//      alertController.dismiss(animated: true, completion: nil)
-//    })
-//
-//    alertController.addAction(cancelAction)
-//
-//    let action = UIAlertAction(title: LocalizationUtil.with("INVITE"), style: .default, handler: { alert -> Void in
-//      self.addContactAction(alertController)
-//    })
-//
-//    alertController.addAction(action)
-//
-//    alertController.addTextField(configurationHandler: { (textField) -> Void in
-//      textField.autocapitalizationType = .words
-//      self.design(textField: textField, placeholderText: LocalizationUtil.with("Name"))
-//    })
-//
-//    alertController.addTextField(configurationHandler: { (textField) -> Void in
-//      textField.keyboardType = .decimalPad
-//      self.design(textField: textField, placeholderText: LocalizationUtil.with("Number"))
-//    })
-//
-//    // Background color
-//    let subView = alertController.view.subviews.first?.subviews.first
-//    subView?.subviews.forEach { view in
-//      view.subviews.forEach { subview_ in
-//        subview_.backgroundColor = UIColor.clear
-//        if let visAffectView = subview_ as? UIVisualEffectView {
-//          visAffectView.effect = nil
-//        }
-//      }
-//    }
-    
-//    self.present(alertController, animated: true, completion: nil)
+//    self.view.addSubview(self.alertView!)
+    superView?.addSubview(self.alertView!)
+    superView?.bringSubview(toFront: self.alertView!)
   }
     
     // MARK: - Table View DataSource
