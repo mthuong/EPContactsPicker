@@ -23,13 +23,9 @@ struct EPGlobalConstants {
 
 //MARK: Color Constants
     struct Colors {
-        static let emeraldColor = UIColor(red: (46/255), green: (204/255), blue: (113/255), alpha: 1.0)
-        static let sunflowerColor = UIColor(red: (241/255), green: (196/255), blue: (15/255), alpha: 1.0)
-        static let pumpkinColor = UIColor(red: (211/255), green: (84/255), blue: (0/255), alpha: 1.0)
-        static let asbestosColor = UIColor(red: (127/255), green: (140/255), blue: (141/255), alpha: 1.0)
-        static let amethystColor = UIColor(red: (155/255), green: (89/255), blue: (182/255), alpha: 1.0)
-        static let peterRiverColor = UIColor(red: (52/255), green: (152/255), blue: (219/255), alpha: 1.0)
-        static let pomegranateColor = UIColor(red: (192/255), green: (57/255), blue: (43/255), alpha: 1.0)
+      static let grey = UIColor(red: 243 / 255.0, green: 243 / 255.0, blue: 243 / 255.0, alpha: 1.0)
+      static let lightGrey = UIColor(red: 203 / 255.0, green: 203 / 255.0, blue: 203 / 255.0, alpha: 1.0)
+      static let nxYellow = UIColor(red: 251 / 255.0, green: 176 / 255.0, blue: 64 / 255.0, alpha: 1.0)
     }
     
     
@@ -37,5 +33,11 @@ struct EPGlobalConstants {
     struct Arrays {
         static let alphabets = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","#"] //# indicates the names with numbers and blank spaces
     }
-    
+  
+  //MARK: Fonts Constants
+  struct Fonts {
+    static let titleFont = UIFont(name: "Montserrat-Regular", size: 16.5)
+    static let feildFont = UIFont(name: "OpenSans-Italic", size: 16.5)
+    static let buttonFont = UIFont(name: "Montserrat-Regular", size: 14.0)
+  }
 }
