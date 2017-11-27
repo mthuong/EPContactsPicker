@@ -23,6 +23,6 @@ DESC
   s.resource_bundles = {
     'EPContactsPicker' => ['Files/**/*.xib']
     }
-  s.dependency 'KLCPopup', :git => 'git@github.com:jmascia/KLCPopup.git'
+  s.dependency 'KLCPopup', '1.1'
 
 end
