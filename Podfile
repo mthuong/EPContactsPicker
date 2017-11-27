@@ -7,5 +7,4 @@ target 'Contacts Picker' do
 
   # Pods for Contacts Picker
   pod 'KLCPopup', :git => 'git@github.com:jmascia/KLCPopup.git', :branch => '1.1'
-
 end
