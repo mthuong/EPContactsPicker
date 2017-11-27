@@ -318,6 +318,7 @@ open class EPContactsPicker: UITableViewController, UISearchResultsUpdating, UIS
     alertView_.cancelButton.addTarget(self, action: #selector(EPContactsPicker.dismissAlertView), for: .touchUpInside)
     self.alertView = alertView_
     popup = KLCPopup(contentView: alertView_)
+    popup?.dimmedMaskAlpha = 0.8
     popup?.show()
   }
     

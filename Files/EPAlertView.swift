@@ -10,8 +10,8 @@ import UIKit
 import Foundation
 
 open class EPAlertView: UIView {
-  fileprivate var framePortrait = CGRect(x: 0, y: 0, width: 300, height: 383)
-  fileprivate var frameLandscape = CGRect(x: 0, y: 0, width: 375, height: 250)
+  fileprivate var FramePortrait = CGRect(x: 0, y: 0, width: 300, height: 383)
+  fileprivate var FrameLandscape = CGRect(x: 0, y: 0, width: 375, height: 250)
   var contentView = UIView()
   var nameField = UITextField()
   var numberField = UITextField()
@@ -98,20 +98,14 @@ open class EPAlertView: UIView {
   }
   
   required public override init(frame: CGRect) {
-    super.init(frame: frame)
+    var lockedFrame = FramePortrait
     
-    var width = frame.size.width
-    var height = frame.size.height
     if UIDevice.current.orientation.isLandscape {
-      let temp = width
-      width = height
-      height = temp
+      lockedFrame = FrameLandscape
     }
     
-    frameLandscape = CGRect(x: 0, y: 0, width: height, height: width)
-    framePortrait = CGRect(x: 0, y: 0, width: width, height: height)
-    
-    contentView.frame = frame
+    super.init(frame: lockedFrame)
+    contentView.frame = lockedFrame
     contentView.backgroundColor = UIColor.clear
     self.addSubviewAutoLayoutFill(contentView)
     
@@ -148,9 +142,9 @@ open class EPAlertView: UIView {
   
   func onOrientationChanged() {
     if UIDevice.current.orientation.isLandscape {
-      self.frame = frameLandscape
+      self.frame = FrameLandscape
     } else {
-      self.frame = framePortrait
+      self.frame = FramePortrait
     }
   }
 }
