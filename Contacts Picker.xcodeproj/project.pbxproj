@@ -133,7 +133,7 @@
 				AF98C2091FBDD92D002E2351 /* EPAlertView.xib */,
 			);
 			name = EPContactsPicker;
-			path = Pods;
+			path = "Contacts Picker";
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
