@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		2D4FBBA398F695AF2C35BE20 /* Pods_Contacts_Picker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6D039A2092574F29449FA45 /* Pods_Contacts_Picker.framework */; };
 		AF8BF4811FBD730400AAC665 /* EPLocalizationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8BF4801FBD730400AAC665 /* EPLocalizationUtil.swift */; };
-		AF8BF4831FBD741600AAC665 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF8BF4821FBD741600AAC665 /* Localizable.strings */; };
 		AF8BF48D1FBD8F7A00AAC665 /* EPAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8BF48C1FBD8F7A00AAC665 /* EPAlertView.swift */; };
-		AF98C2071FBDD92D002E2351 /* EPAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF98C2091FBDD92D002E2351 /* EPAlertView.xib */; };
 		AFD2C24C1FC6F9D0008EE76C /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = AFD2C24B1FC6F9CF008EE76C /* Fonts */; };
 		AFE1CDBE1FCC404E00E08107 /* KLCPopup.framework in Sources */ = {isa = PBXBuildFile; fileRef = AFE1CDA61FCC231600E08107 /* KLCPopup.framework */; };
 		AFE1CDC01FCC41DC00E08107 /* KLCPopup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE1CDC11FCC41DC00E08107 /* KLCPopup.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -34,10 +32,7 @@
 		4B7552C01CD28ADA00C638F1 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		5154EB1D5863A97A59F03728 /* Pods-Contacts Picker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Contacts Picker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Contacts Picker/Pods-Contacts Picker.release.xcconfig"; sourceTree = "<group>"; };
 		AF8BF4801FBD730400AAC665 /* EPLocalizationUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPLocalizationUtil.swift; sourceTree = "<group>"; };
-		AF8BF4821FBD741600AAC665 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		AF8BF48C1FBD8F7A00AAC665 /* EPAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPAlertView.swift; sourceTree = "<group>"; };
-		AF98C2081FBDD92D002E2351 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/EPAlertView.xib; sourceTree = "<group>"; };
-		AF98C20B1FBDD92F002E2351 /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/EPAlertView.strings; sourceTree = "<group>"; };
 		AFD2C24B1FC6F9CF008EE76C /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 		AFE1CDA61FCC231600E08107 /* KLCPopup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KLCPopup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE1CDC11FCC41DC00E08107 /* KLCPopup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KLCPopup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,9 +130,7 @@
 				F4C1C97A1BDF9227001AA643 /* EPContactsPicker.swift */,
 				F4C1C97B1BDF9227001AA643 /* EPExtensions.swift */,
 				AF8BF4801FBD730400AAC665 /* EPLocalizationUtil.swift */,
-				AF8BF4821FBD741600AAC665 /* Localizable.strings */,
 				AF8BF48C1FBD8F7A00AAC665 /* EPAlertView.swift */,
-				AF98C2091FBDD92D002E2351 /* EPAlertView.xib */,
 			);
 			name = EPContactsPicker;
 			path = Files;
@@ -207,9 +200,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF98C2071FBDD92D002E2351 /* EPAlertView.xib in Resources */,
 				F4C1C94C1BDF8AB7001AA643 /* LaunchScreen.storyboard in Resources */,
-				AF8BF4831FBD741600AAC665 /* Localizable.strings in Resources */,
 				F4C1C9491BDF8AB7001AA643 /* Assets.xcassets in Resources */,
 				F4C1C9741BDF8BE3001AA643 /* Main.storyboard in Resources */,
 				F4C1C97F1BDF9227001AA643 /* EPContactCell.xib in Resources */,
@@ -295,15 +286,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AF98C2091FBDD92D002E2351 /* EPAlertView.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AF98C2081FBDD92D002E2351 /* Base */,
-				AF98C20B1FBDD92F002E2351 /* he */,
-			);
-			name = EPAlertView.xib;
-			sourceTree = "<group>";
-		};
 		F4C1C94A1BDF8AB7001AA643 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
