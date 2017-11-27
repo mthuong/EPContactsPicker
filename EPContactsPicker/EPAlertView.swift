@@ -153,12 +153,12 @@ open class EPAlertView: UIView {
   func onOrientationChanged() {
     if UIDevice.current.orientation.isLandscape {
       self.frame = frameLandscape
-      self.contentView.frame = frameLandscape
-      self.backgroundView.frame = frameLandscape
+//      self.contentView.frame = frameLandscape
+//      self.backgroundView.frame = frameLandscape
     } else {
       self.frame = framePortrait
-      self.contentView.frame = framePortrait
-      self.backgroundView.frame = framePortrait
+//      self.contentView.frame = framePortrait
+//      self.backgroundView.frame = framePortrait
     }
   }
 }
