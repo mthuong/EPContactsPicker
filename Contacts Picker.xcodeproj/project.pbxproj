@@ -14,6 +14,7 @@
 		AF98C2071FBDD92D002E2351 /* EPAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF98C2091FBDD92D002E2351 /* EPAlertView.xib */; };
 		AFD2C24C1FC6F9D0008EE76C /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = AFD2C24B1FC6F9CF008EE76C /* Fonts */; };
 		AFE1CDA51FCC231600E08107 /* KLCPopup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE1CDA61FCC231600E08107 /* KLCPopup.framework */; };
+		AFE1CDBE1FCC404E00E08107 /* KLCPopup.framework in Sources */ = {isa = PBXBuildFile; fileRef = AFE1CDA61FCC231600E08107 /* KLCPopup.framework */; };
 		E210822E1D916C6F002CCAD5 /* EPContactsPicker.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E210822D1D916C6F002CCAD5 /* EPContactsPicker.podspec */; };
 		F4C1C9421BDF8AB7001AA643 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C1C9411BDF8AB7001AA643 /* AppDelegate.swift */; };
 		F4C1C9491BDF8AB7001AA643 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4C1C9481BDF8AB7001AA643 /* Assets.xcassets */; };
@@ -276,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFE1CDBE1FCC404E00E08107 /* KLCPopup.framework in Sources */,
 				AF8BF4811FBD730400AAC665 /* EPLocalizationUtil.swift in Sources */,
 				F4C1C9421BDF8AB7001AA643 /* AppDelegate.swift in Sources */,
 				F4C1C9801BDF9227001AA643 /* EPContactsPicker.swift in Sources */,
