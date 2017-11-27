@@ -8,7 +8,7 @@
 
 import UIKit
 import Contacts
-
+import KLCPopup
 
 public protocol EPPickerDelegate: class {
     func epContactPicker(_: EPContactsPicker, didContactFetchFailed error: NSError)
@@ -56,6 +56,7 @@ open class EPContactsPicker: UITableViewController, UISearchResultsUpdating, UIS
     var subtitleCellValue = SubtitleCellValue.phoneNumber
     var multiSelectEnabled: Bool = false //Default is single selection contact
     var alertView: EPAlertView?
+    var popup: KLCPopup?
     
     // MARK: - Lifecycle Methods
     
@@ -271,7 +272,7 @@ open class EPContactsPicker: UITableViewController, UISearchResultsUpdating, UIS
     guard let alertView = self.alertView else {
       return
     }
-    alertView.removeFromSuperview()
+    self.popup?.dismiss(true)
     
     guard let nameField = alertView.nameField.text,
           let phoneField = alertView.numberField.text else {
@@ -306,18 +307,21 @@ open class EPContactsPicker: UITableViewController, UISearchResultsUpdating, UIS
   }
   
   func dismissAlertView() {
-    self.alertView?.removeFromSuperview()
+    self.popup?.dismiss(true)
   }
   
   func presenetNewContactScreen() {
+//    self.popup: KLCPopup? = nil
     let alertView_ = EPAlertView(frame: self.view.frame)
-    self.alertView = alertView_
+//    self.alertView = alertView_
     alertView_.inviteButton.addTarget(self, action: #selector(EPContactsPicker.addContactAction), for: .touchUpInside)
     alertView_.cancelButton.addTarget(self, action: #selector(EPContactsPicker.dismissAlertView), for: .touchUpInside)
     self.alertView = alertView_
 //    self.view.addSubview(self.alertView!)
-    superView?.addSubview(self.alertView!)
-    superView?.bringSubview(toFront: self.alertView!)
+//    superView?.addSubview(self.alertView!)
+//    superView?.bringSubview(toFront: self.alertView!)
+    popup = KLCPopup(contentView: alertView_)
+    popup?.show()
   }
     
     // MARK: - Table View DataSource

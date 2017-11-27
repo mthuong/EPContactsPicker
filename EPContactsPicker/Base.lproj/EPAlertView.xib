@@ -28,33 +28,29 @@
             <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view alpha="0.69999998807907104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RPY-uh-nvm" userLabel="Background View">
-                    <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gad-xA-rFp" customClass="EPAlertController" customModule="Contacts_Picker" customModuleProvider="target">
                     <rect key="frame" x="193.5" y="50" width="280" height="275"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADD CONTACT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYq-Mt-AFV">
-                            <rect key="frame" x="81" y="50" width="118.5" height="20"/>
+                            <rect key="frame" x="82.5" y="50" width="115.5" height="23.5"/>
                             <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                             <color key="textColor" red="0.98431372549999996" green="0.69019607839999997" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0h6-ms-IQb">
-                            <rect key="frame" x="5" y="90" width="270" height="30"/>
+                            <rect key="frame" x="5" y="93.5" width="270" height="30"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="name"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QdP-om-rU0">
-                            <rect key="frame" x="5" y="130" width="270" height="30"/>
+                            <rect key="frame" x="5" y="133.5" width="270" height="30"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Qv-RP-XZG">
-                            <rect key="frame" x="155" y="200" width="120" height="30"/>
+                            <rect key="frame" x="155" y="203.5" width="120" height="30"/>
                             <color key="backgroundColor" red="0.98431372549999996" green="0.69019607839999997" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <state key="normal" title="INVITE">
@@ -65,7 +61,7 @@
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MUQ-9W-E00">
-                            <rect key="frame" x="5" y="200" width="120" height="30"/>
+                            <rect key="frame" x="5" y="203.5" width="120" height="30"/>
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <state key="normal" title="CANCEL">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -95,12 +91,8 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="RPY-uh-nvm" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="1uA-PK-MEA"/>
                 <constraint firstItem="Gad-xA-rFp" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="1yp-vf-wlh"/>
                 <constraint firstItem="Gad-xA-rFp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="50" id="375-Sj-55b"/>
-                <constraint firstItem="RPY-uh-nvm" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Gu4-kS-kze"/>
-                <constraint firstItem="RPY-uh-nvm" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="HgK-fb-evT"/>
-                <constraint firstItem="RPY-uh-nvm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="PEN-xV-CpV"/>
                 <constraint firstItem="Gad-xA-rFp" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="X47-rQ-Z6e"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

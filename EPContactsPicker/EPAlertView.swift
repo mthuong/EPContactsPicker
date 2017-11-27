@@ -112,12 +112,12 @@ open class EPAlertView: UIView {
     frameLandscape = CGRect(x: 0, y: 0, width: height, height: width)
     framePortrait = CGRect(x: 0, y: 0, width: width, height: height)
     
-    backgroundView = UIView(frame: frame)
-    backgroundView.backgroundColor = UIColor(white: 0, alpha: 0.8)
+//    backgroundView = UIView(frame: frame)
+//    backgroundView.backgroundColor = UIColor(white: 0, alpha: 0.8)
     contentView.frame = frame
     contentView.backgroundColor = UIColor.clear
-    self.addSubviewAutoLayoutFill(backgroundView)
-    self.addSubviewAutoLayoutFill(contentView)
+//    self.addSubviewAutoLayoutFill(backgroundView)
+    self.addSubviewAutoLayout(contentView)
     
     addTitle()
     addNameField()
@@ -160,7 +160,5 @@ open class EPAlertView: UIView {
       self.contentView.frame = framePortrait
       self.backgroundView.frame = framePortrait
     }
-    
-    self.layoutSubviews()
   }
 }
