@@ -13,8 +13,8 @@
 		AF8BF48D1FBD8F7A00AAC665 /* EPAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8BF48C1FBD8F7A00AAC665 /* EPAlertView.swift */; };
 		AF98C2071FBDD92D002E2351 /* EPAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF98C2091FBDD92D002E2351 /* EPAlertView.xib */; };
 		AFD2C24C1FC6F9D0008EE76C /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = AFD2C24B1FC6F9CF008EE76C /* Fonts */; };
-		AFE1CDA51FCC231600E08107 /* KLCPopup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE1CDA61FCC231600E08107 /* KLCPopup.framework */; };
 		AFE1CDBE1FCC404E00E08107 /* KLCPopup.framework in Sources */ = {isa = PBXBuildFile; fileRef = AFE1CDA61FCC231600E08107 /* KLCPopup.framework */; };
+		AFE1CDC01FCC41DC00E08107 /* KLCPopup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE1CDC11FCC41DC00E08107 /* KLCPopup.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		E210822E1D916C6F002CCAD5 /* EPContactsPicker.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E210822D1D916C6F002CCAD5 /* EPContactsPicker.podspec */; };
 		F4C1C9421BDF8AB7001AA643 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C1C9411BDF8AB7001AA643 /* AppDelegate.swift */; };
 		F4C1C9491BDF8AB7001AA643 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4C1C9481BDF8AB7001AA643 /* Assets.xcassets */; };
@@ -41,6 +41,7 @@
 		AF98C20B1FBDD92F002E2351 /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/EPAlertView.strings; sourceTree = "<group>"; };
 		AFD2C24B1FC6F9CF008EE76C /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 		AFE1CDA61FCC231600E08107 /* KLCPopup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KLCPopup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFE1CDC11FCC41DC00E08107 /* KLCPopup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KLCPopup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E210822D1D916C6F002CCAD5 /* EPContactsPicker.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EPContactsPicker.podspec; sourceTree = "<group>"; };
 		F4C1C93E1BDF8AB7001AA643 /* Contacts Picker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Contacts Picker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C1C9411BDF8AB7001AA643 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFE1CDA51FCC231600E08107 /* KLCPopup.framework in Frameworks */,
+				AFE1CDC01FCC41DC00E08107 /* KLCPopup.framework in Frameworks */,
 				90CE15BF1CB22D2DA50836E9 /* Pods_Contacts_Picker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,6 +74,7 @@
 		395460ED7D498EBD3F175853 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AFE1CDC11FCC41DC00E08107 /* KLCPopup.framework */,
 				AFE1CDA61FCC231600E08107 /* KLCPopup.framework */,
 				A9E8A3B05DBE6CBF09EF5A06 /* Pods_Contacts_Picker.framework */,
 			);
