@@ -15,6 +15,7 @@ class EPContactCell: UITableViewCell {
   @IBOutlet weak var contactImageView: UIImageView!
   @IBOutlet weak var contactInitialLabel: UILabel!
   @IBOutlet weak var contactContainerView: UIView!
+  @IBOutlet weak var singleTextLabel: UILabel!
   
   var contact: EPContact?
   
@@ -35,8 +36,15 @@ class EPContactCell: UITableViewCell {
     self.contact = contact
     //Update all UI in the cell here
     self.backgroundColor = UIColor.clear
-    self.contactTextLabel?.text = contact.displayName()
+    let displayName = contact.displayName()
+    self.contactTextLabel?.text = displayName
     self.contactTextLabel.textColor = UIColor.white
+    if displayName.trimmingCharacters(in: .whitespaces)
+        == EPLocalizationUtil.with("+ Add phone number").trimmingCharacters(in: .whitespaces) {
+      self.contactTextLabel?.text = ""
+      self.singleTextLabel.text = EPLocalizationUtil.with("+ Add phone number")
+      self.singleTextLabel.font = self.contactTextLabel.font
+    }
     updateSubtitleBasedonType(subtitleType, contact: contact)
     if contact.thumbnailProfileImage != nil {
       self.contactImageView?.image = contact.thumbnailProfileImage
