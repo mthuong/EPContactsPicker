@@ -38,6 +38,7 @@ class EPContactCell: UITableViewCell {
     self.backgroundColor = UIColor.clear
     let displayName = contact.displayName()
     self.contactTextLabel?.text = displayName
+    self.singleTextLabel.text = ""
     self.contactTextLabel.textColor = UIColor.white
     if displayName.trimmingCharacters(in: .whitespaces)
         == EPLocalizationUtil.with("+ Add phone number").trimmingCharacters(in: .whitespaces) {
