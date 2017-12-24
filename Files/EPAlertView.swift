@@ -33,7 +33,9 @@ open class EPAlertView: UIView {
   
   fileprivate func addNameField() {
     nameField.autocapitalizationType = .words
-    nameField.placeholder = EPLocalizationUtil.with(" Name")
+    nameField.placeholder = EPLocalizationUtil.with("Name")
+    nameField.setLeftPaddingPoints(10)
+    nameField.setRightPaddingPoints(10)
     nameField.backgroundColor = UIColor.white
     nameField.font = EPGlobalConstants.Fonts.feildFont
     contentView.addSubview(nameField)
@@ -50,7 +52,9 @@ open class EPAlertView: UIView {
   
   fileprivate func addNumberField() {
     numberField.keyboardType = .numberPad
-    numberField.placeholder = EPLocalizationUtil.with(" Number")
+    numberField.placeholder = EPLocalizationUtil.with("Number")
+    numberField.setLeftPaddingPoints(10)
+    numberField.setRightPaddingPoints(10)
     numberField.backgroundColor = UIColor.white
     numberField.font = EPGlobalConstants.Fonts.feildFont
     contentView.addSubview(numberField)
