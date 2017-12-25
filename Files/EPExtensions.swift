@@ -71,18 +71,15 @@ public extension UIView {
   }
 }
 
-class CustomTextField : UITextField {
-  let padding = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
-  
-  override func textRect(forBounds bounds: CGRect) -> CGRect {
-    return UIEdgeInsetsInsetRect(bounds, padding)
+extension UITextField {
+  func setLeftPaddingPoints(_ amount:CGFloat){
+    let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: amount, height: self.frame.size.height))
+    self.leftView = paddingView
+    self.leftViewMode = .always
   }
-  
-  override func placeholderRect(forBounds bounds: CGRect) -> CGRect {
-    return UIEdgeInsetsInsetRect(bounds, padding)
-  }
-  
-  override func editingRect(forBounds bounds: CGRect) -> CGRect {
-    return UIEdgeInsetsInsetRect(bounds, padding)
+  func setRightPaddingPoints(_ amount:CGFloat) {
+    let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: amount, height: self.frame.size.height))
+    self.rightView = paddingView
+    self.rightViewMode = .always
   }
 }
