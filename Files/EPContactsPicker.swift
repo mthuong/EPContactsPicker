@@ -305,7 +305,8 @@ open class EPContactsPicker: UITableViewController, UISearchResultsUpdating, UIS
     self.alertView = alertView_
     popup = KLCPopup(contentView: alertView_)
     popup?.dimmedMaskAlpha = 0.8
-    popup?.show()
+    let center = CGPoint(x: self.view.center.x, y: self.view.center.y - 70)
+    popup?.show(atCenter: center, in: self.view)
   }
   
   // MARK: - Table View DataSource
