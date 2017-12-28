@@ -378,6 +378,8 @@ open class EPContactsPicker: UITableViewController, UISearchResultsUpdating, UIS
       let enabled = self.multiSelectContactLimit == 0
         || self.selectedContacts.count == self.multiSelectContactLimit
       self.contactDelegate?.updateSendButton(enabled: enabled, selectedContacts: self.selectedContacts)
+      resultSearchController.isActive = false
+      tableView.reloadData()
     } else {
       //Single selection code
       resultSearchController.isActive = false
