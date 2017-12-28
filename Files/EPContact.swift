@@ -63,7 +63,7 @@ open class EPContact {
   }
   
   open func displayName() -> String {
-    return [firstName, lastName].joined(separator: " ")
+    return [firstName, lastName].filter { !$0.isEmpty }.joined(separator: " ")
   }
   
   open func contactInitials() -> String {
