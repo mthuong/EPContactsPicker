@@ -18,6 +18,7 @@ public protocol EPPickerDelegate: class {
   
   func updateSendButton(enabled: Bool, selectedContacts: [EPContact])
   func presentContactPermissionAlert()
+  func trackStage()
 }
 
 public extension EPPickerDelegate {
@@ -28,6 +29,7 @@ public extension EPPickerDelegate {
   
   func updateSendButton(enabled: Bool, selectedContacts: [EPContact]) { }
   func presentContactPermissionAlert() { }
+  func trackStage() { }
 }
 
 typealias ContactsHandler = (_ contacts : [CNContact] , _ error : NSError?) -> Void
@@ -156,6 +158,7 @@ open class EPContactsPicker: UITableViewController, UISearchResultsUpdating, UIS
       if (error == nil) {
         DispatchQueue.main.async(execute: {
           self.tableView.reloadData()
+          self.contactDelegate?.trackStage()
         })
       }
     })
