@@ -13,13 +13,13 @@ open class EPLocalizationUtil {
     return NSLocalizedString(string, comment: "")
   }
   
-  open static let preferredLanguage: String? = Bundle.main.preferredLocalizations[0]
+  public static let preferredLanguage: String? = Bundle.main.preferredLocalizations[0]
   
   open class var country : String? {
     let region = Locale.current.identifier
     if let index = region.index(of: "_"),
       let nextIndex = region.index(index, offsetBy: 1, limitedBy: region.endIndex) {
-      return region.substring(from: nextIndex)
+      return String(region[nextIndex...])
     }
     if region == "" &&
       EPLocalizationUtil.preferredLanguage?.caseInsensitiveCompare("he") == .orderedSame {

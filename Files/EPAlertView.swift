@@ -120,7 +120,7 @@ open class EPAlertView: UIView {
 
     NotificationCenter.default.addObserver(self,
                                            selector: #selector(EPAlertView.onOrientationChanged),
-                                           name: NSNotification.Name.UIDeviceOrientationDidChange,
+                                           name: UIDevice.orientationDidChangeNotification,
                                            object: nil)
   }
   
@@ -134,7 +134,7 @@ open class EPAlertView: UIView {
     numberField.addTarget(self, action: #selector(EPAlertView.textFieldsIsNotEmpty), for: .editingChanged)
   }
   
-  func textFieldsIsNotEmpty() {
+  @objc func textFieldsIsNotEmpty() {
     guard let name = nameField.text,
       let number = numberField.text else {
         self.inviteButton.isEnabled = false
@@ -144,7 +144,7 @@ open class EPAlertView: UIView {
     inviteButton.isEnabled = !name.isEmpty && !number.isEmpty
   }
   
-  func onOrientationChanged() {
+  @objc func onOrientationChanged() {
     if UIDevice.current.orientation.isLandscape {
       self.frame = FrameLandscape
     } else {

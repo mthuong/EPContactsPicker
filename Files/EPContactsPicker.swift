@@ -92,11 +92,11 @@ open class EPContactsPicker: UITableViewController, UISearchResultsUpdating, UIS
   }
   
   func inititlizeBarButtons() {
-    let cancelButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: self, action: #selector(onTouchCancelButton))
+    let cancelButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(onTouchCancelButton))
     self.navigationItem.leftBarButtonItem = cancelButton
     
     if multiSelectEnabled {
-      let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(onTouchDoneButton))
+      let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(onTouchDoneButton))
       self.navigationItem.rightBarButtonItem = doneButton
       
     }
@@ -250,14 +250,14 @@ open class EPContactsPicker: UITableViewController, UISearchResultsUpdating, UIS
   
   fileprivate func design(textField: UITextField, placeholderText: String) {
     textField.attributedPlaceholder = NSAttributedString(string: placeholderText,
-                                                         attributes: [NSForegroundColorAttributeName: UIColor.black])
+                                                         attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
     textField.font = UIFont(name: "HelveticaNeue", size: 14.0)!
     let heightConstraint = NSLayoutConstraint(item: textField, attribute: .height, relatedBy: .equal,
                                               toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 25)
     textField.addConstraint(heightConstraint)
   }
   
-  func addContactAction() {
+  @objc func addContactAction() {
     guard let alertView = self.alertView else {
       return
     }
@@ -295,7 +295,7 @@ open class EPContactsPicker: UITableViewController, UISearchResultsUpdating, UIS
     }
   }
   
-  func dismissAlertView() {
+  @objc func dismissAlertView() {
     self.popup?.dismiss(true)
   }
   
@@ -329,7 +329,7 @@ open class EPContactsPicker: UITableViewController, UISearchResultsUpdating, UIS
   // MARK: - Table View Delegates
   override open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! EPContactCell
-    cell.accessoryType = UITableViewCellAccessoryType.none
+    cell.accessoryType = UITableViewCell.AccessoryType.none
     //Convert CNContact to EPContact
     let contact: EPContact
     
@@ -345,7 +345,7 @@ open class EPContactsPicker: UITableViewController, UISearchResultsUpdating, UIS
     }
     
     if multiSelectEnabled  && selectedContacts.contains(where: { $0.contactId == contact.contactId }) {
-      cell.accessoryType = UITableViewCellAccessoryType.checkmark
+      cell.accessoryType = UITableViewCell.AccessoryType.checkmark
       cell.tintColor = EPGlobalConstants.Colors.nxYellow
     }
     
@@ -369,13 +369,13 @@ open class EPContactsPicker: UITableViewController, UISearchResultsUpdating, UIS
     
     if multiSelectEnabled {
       //Keeps track of enable=ing and disabling contacts
-      if cell.accessoryType == UITableViewCellAccessoryType.checkmark {
-        cell.accessoryType = UITableViewCellAccessoryType.none
+      if cell.accessoryType == UITableViewCell.AccessoryType.checkmark {
+        cell.accessoryType = UITableViewCell.AccessoryType.none
         selectedContacts = selectedContacts.filter(){
           return selectedContact.contactId != $0.contactId
         }
       } else if (self.multiSelectContactLimit == 0 || self.selectedContacts.count < Int(self.multiSelectContactLimit)) {
-        cell.accessoryType = UITableViewCellAccessoryType.checkmark
+        cell.accessoryType = UITableViewCell.AccessoryType.checkmark
         cell.tintColor = EPGlobalConstants.Colors.nxYellow
         selectedContacts.append(selectedContact)
       }
@@ -401,7 +401,7 @@ open class EPContactsPicker: UITableViewController, UISearchResultsUpdating, UIS
   
   override open func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
     if resultSearchController.isActive { return 0 }
-    tableView.scrollToRow(at: IndexPath(row: 0, section: index), at: UITableViewScrollPosition.top , animated: false)
+    tableView.scrollToRow(at: IndexPath(row: 0, section: index), at: UITableView.ScrollPosition.top , animated: false)
     return sortedContactKeys.index(of: title)!
   }
   
@@ -411,13 +411,13 @@ open class EPContactsPicker: UITableViewController, UISearchResultsUpdating, UIS
   }
   
   // MARK: - Button Actions
-  func onTouchCancelButton() {
+  @objc func onTouchCancelButton() {
     dismiss(animated: true, completion: {
       self.contactDelegate?.epContactPicker(self, didCancel: NSError(domain: "EPContactPickerErrorDomain", code: 2, userInfo: [ NSLocalizedDescriptionKey: "User Canceled Selection"]))
     })
   }
   
-  func onTouchDoneButton() {
+  @objc func onTouchDoneButton() {
     dismiss(animated: true, completion: {
       self.contactDelegate?.epContactPicker(self, didSelectMultipleContacts: self.selectedContacts)
     })
@@ -427,7 +427,7 @@ open class EPContactsPicker: UITableViewController, UISearchResultsUpdating, UIS
   open func updateSearchResults(for searchController: UISearchController) {
     if let searchText = resultSearchController.searchBar.text , searchController.isActive {
       let predicate: NSPredicate
-      if searchText.characters.count > 0 {
+      if searchText.count > 0 {
         predicate = CNContact.predicateForContacts(matchingName: searchText)
       } else {
         predicate = CNContact.predicateForContactsInContainer(withIdentifier: contactsStore!.defaultContainerIdentifier())
