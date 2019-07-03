@@ -6,5 +6,5 @@ target 'Contacts Picker' do
   use_frameworks!
 
   # Pods for Contacts Picker
-  pod 'KLCPopup', :git => 'git@github.com:jmascia/KLCPopup.git', :branch => '1.1'
+  pod 'KLCPopup', :git => 'https://github.com/flatcircle/KLCPopup.git'
 end
