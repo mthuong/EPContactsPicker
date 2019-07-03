@@ -1,22 +1,21 @@
 PODS:
-  - KLCPopup (1.1)
+  - KLCPopup (1.2)
 
 DEPENDENCIES:
-  - "KLCPopup (from `git@github.com:jmascia/KLCPopup.git`, branch `1.1`)"
+  - KLCPopup (from `https://github.com/flatcircle/KLCPopup.git`)
 
 EXTERNAL SOURCES:
   KLCPopup:
-    :branch: '1.1'
-    :git: "git@github.com:jmascia/KLCPopup.git"
+    :git: https://github.com/flatcircle/KLCPopup.git
 
 CHECKOUT OPTIONS:
   KLCPopup:
-    :commit: 7a6287b3af8628b4c05159e80976d9ea2c9a8ba1
-    :git: "git@github.com:jmascia/KLCPopup.git"
+    :commit: 8487679da66888bae1fdab9eeedcb4912660dfae
+    :git: https://github.com/flatcircle/KLCPopup.git
 
 SPEC CHECKSUMS:
-  KLCPopup: f233d3334c4808d1087ede03b3ae72fc3fc8a2aa
+  KLCPopup: 72054f96d1a597dfeb10c2a1f126c0adc346f601
 
-PODFILE CHECKSUM: b82c6c70e9446556f90979dc78a9d7c55a84979e
+PODFILE CHECKSUM: 8c45788ccd4326dc7cda70483d190b0d4561f622
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.7.3

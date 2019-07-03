@@ -23,6 +23,6 @@ DESC
   s.resource_bundles = {
     'EPContactsPicker' => ['Files/**/*.xib']
     }
-  s.dependency 'KLCPopup', '1.1'
+  s.dependency 'KLCPopup'
 
 end
